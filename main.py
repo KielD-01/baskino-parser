@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import parser
-
 parse_class = parser.BasKinoParser()
 
 # Parsing categories

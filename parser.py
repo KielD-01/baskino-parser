@@ -111,7 +111,7 @@ class BasKinoParser:
                     movie_link = tmp_data.find('div', class_='posttitle').a['href']
                     movie_img = tmp_data.find('div', class_='postcover').img['src']
                     movie_released = tmp_data.find('div', class_='rinline')
-                    released = re.search(re.compile(u'Год выпуска: (\d+)'), str(movie_released)).group(1)
+                    released = re.search(re.compile('Год выпуска: (\d+)'), str(movie_released)).group(1)
 
                     db.execute("INSERT INTO movies VALUES (NULL , ?, ?, ?, ?, ?)", [
                         cat_id, movie_title, movie_link, movie_rating, released
